@@ -22,7 +22,7 @@ export default async (req) => {
      // Se crea el objeto con la información a guardar | Datos obtenidos desde el navegador y con la petición
     const dataToSave = {
       ...bodyData,
-      "z-headers": req.headers // todos los headers de la petición dentro de z-headers
+      "z-headers": req.headers || {} // todos los headers de la petición dentro de z-headers
     };
 
     // Inserta los datos en una tabla llamada 'respuestas'
@@ -34,7 +34,7 @@ export default async (req) => {
     return new Response(JSON.stringify({ estado: "ok" }), {
       headers: { "Content-Type": "application/json" },
     });
-    
+
   } catch (error) {
     console.error("Error al guardar:", error);
     return new Response(JSON.stringify({ estado: "error", detalle: error.message }), {
