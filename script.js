@@ -33,7 +33,16 @@ async function sendInfo(info) {
             body: JSON.stringify(info)
         });
 
-        const resultado = await respuesta.json();
+        let resultado = "";
+
+        if (respuesta.ok) {
+            resultado = await respuesta.json();
+            console.log("El servidor devolvio: ");
+            console.log(resultado)
+        } else {
+            console.log(`Error al hacer la peticion HTTP: ${response.status}`);
+        }
+        
 
         return true;
     } catch (error) {
