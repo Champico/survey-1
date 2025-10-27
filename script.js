@@ -24,8 +24,10 @@ function getFormData(form) {
 }
 
 async function sendInfo(info) {
+    const url = "https://survey-so.netlify.app/.netlify/functions/guardar";
+    console.log(url)
     try {
-        const respuesta = await fetch("https://survey-so.netlify.app/.netlify/functions/guardar", {
+        const respuesta = await fetch(url, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
