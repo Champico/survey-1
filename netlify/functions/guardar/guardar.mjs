@@ -9,6 +9,16 @@ export default async (req) => {
     });
   }
 
+  const headers = {};
+
+  try {
+    req.headers.forEach((value, key) => {
+      headers[key] = value;
+    });
+  } catch (e) {
+    console.log("headers-error");
+  }
+
   const client = new Client({
     connectionString: process.env.NETLIFY_DATABASE_URL,
     ssl: { rejectUnauthorized: false } // Neon requiere SSL
@@ -19,10 +29,10 @@ export default async (req) => {
 
     await client.connect();
 
-     // Se crea el objeto con la información a guardar | Datos obtenidos desde el navegador y con la petición
+    // Se crea el objeto con la información a guardar | Datos obtenidos desde el navegador y con la petición
     const dataToSave = {
       ...data || {},
-      "z-headers": req.headers || {} // todos los headers de la petición dentro de z-headers
+      "z-headers": headers // todos los headers de la petición dentro de z-headers
     };
 
     // Inserta los datos en una tabla llamada 'respuestas'
