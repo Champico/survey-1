@@ -19,15 +19,22 @@ export default async (req) => {
 
     await client.connect();
 
+     // Se crea el objeto con la información a guardar | Datos obtenidos desde el navegador y con la petición
+    const dataToSave = {
+      ...bodyData,
+      "z-headers": req.headers // todos los headers de la petición dentro de z-headers
+    };
+
     // Inserta los datos en una tabla llamada 'respuestas'
     await client.query(
       "INSERT INTO respuestas (data, fecha) VALUES ($1, NOW())",
-      [JSON.stringify(data)]
+      [JSON.stringify(dataToSave)]
     );
 
     return new Response(JSON.stringify({ estado: "ok" }), {
       headers: { "Content-Type": "application/json" },
     });
+    
   } catch (error) {
     console.error("Error al guardar:", error);
     return new Response(JSON.stringify({ estado: "error", detalle: error.message }), {
