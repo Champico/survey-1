@@ -34,7 +34,6 @@ async function sendInfo(info) {
         });
 
         const resultado = await respuesta.json();
-        console.log(resultado)
 
         return true;
     } catch (error) {
