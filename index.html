@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Encuesta Socioeconómica</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <div class="header">
+      <div class="logo">ES</div>
+      <div>
+        <h1>Encuesta Socioeconómica</h1>
+        <div class="info">
+            <p class="intro">
+            El objetivo de esta encuesta es recopilar información general con fines académicos y de análisis socioeconómico.
+            Los datos proporcionados serán utilizados únicamente para fines de estudio y no serán publicados, compartidos ni vendidos bajo ninguna circunstancia.
+            Agradecemos su participación y sinceridad en las respuestas.
+            </p>
+            <div class="subtitle">12 preguntas • Seleccione la(s) opción(es) que correspondan</div>
+        </div>
+
+      </div>
+    </div>
+
+    <form id="surveyForm" class="card">
+      <div class="form-body">
+
+        <!-- 1 -->
+        <section class="section">
+          <div class="question">
+            <div class="q-number">1</div>
+            <div class="q-content">
+              <p class="q-title">¿Cuál es su rango de edad?</p>
+              <div class="options">
+                <label class="option"><input type="radio" name="edad" value="Menos de 18" required><div class="option-text"><span class="option-label">Menos de 18 años</span></div></label>
+                <label class="option"><input type="radio" name="edad" value="18-25"><div class="option-text"><span class="option-label">18 a 25 años</span></div></label>
+                <label class="option"><input type="radio" name="edad" value="26-35"><div class="option-text"><span class="option-label">26 a 35 años</span></div></label>
+                <label class="option"><input type="radio" name="edad" value="36-45"><div class="option-text"><span class="option-label">36 a 45 años</span></div></label>
+                <label class="option"><input type="radio" name="edad" value="46-60"><div class="option-text"><span class="option-label">46 a 60 años</span></div></label>
+                <label class="option"><input type="radio" name="edad" value=">60"><div class="option-text"><span class="option-label">Más de 60 años</span></div></label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2 -->
+        <section class="section">
+          <div class="question">
+            <div class="q-number">2</div>
+            <div class="q-content">
+              <p class="q-title">¿Cuál es su sexo biológico?</p>
+              <div class="options">
+                <label class="option"><input type="radio" name="sexo" value="Masculino" required><div class="option-text"><span class="option-label">Masculino</span></div></label>
+                <label class="option"><input type="radio" name="sexo" value="Femenino"><div class="option-text"><span class="option-label">Femenino</span></div></label>
+                <label class="option"><input type="radio" name="sexo" value="Prefiero no decirlo"><div class="option-text"><span class="option-label">Prefiero no decirlo</span></div></label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3 -->
+        <section class="section">
+          <div class="question">
+            <div class="q-number">3</div>
+            <div class="q-content">
+              <p class="q-title">¿Cuál es su nivel máximo de estudios alcanzado?</p>
+              <div class="options">
+                <label class="option"><input type="radio" name="estudios" value="Ninguno" required><div class="option-text"><span class="option-label">Ninguno</span></div></label>
+                <label class="option"><input type="radio" name="estudios" value="Primaria"><div class="option-text"><span class="option-label">Primaria</span></div></label>
+                <label class="option"><input type="radio" name="estudios" value="Secundaria"><div class="option-text"><span class="option-label">Secundaria</span></div></label>
+                <label class="option"><input type="radio" name="estudios" value="Bachillerato"><div class="option-text"><span class="option-label">Bachillerato o preparatoria</span></div></label>
+                <label class="option"><input type="radio" name="estudios" value="Tecnico"><div class="option-text"><span class="option-label">Técnico o profesional asociado</span></div></label>
+                <label class="option"><input type="radio" name="estudios" value="Licenciatura"><div class="option-text"><span class="option-label">Licenciatura</span></div></label>
+                <label class="option"><input type="radio" name="estudios" value="Posgrado"><div class="option-text"><span class="option-label">Posgrado (Maestría o Doctorado)</span></div></label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4 -->
+        <section class="section">
+          <div class="question">
+            <div class="q-number">4</div>
+            <div class="q-content">
+              <p class="q-title">¿A qué se dedica actualmente?</p>
+              <div class="options">
+                <label class="option"><input type="radio" name="actividad" value="Estudiante" required><div class="option-text"><span class="option-label">Estudiante</span></div></label>
+                <label class="option"><input type="radio" name="actividad" value="Empleado"><div class="option-text"><span class="option-label">Empleado(a)</span></div></label>
+                <label class="option"><input type="radio" name="actividad" value="Independiente"><div class="option-text"><span class="option-label">Trabajador(a) independiente</span></div></label>
+                <label class="option"><input type="radio" name="actividad" value="Desempleado"><div class="option-text"><span class="option-label">Desempleado(a)</span></div></label>
+                <label class="option"><input type="radio" name="actividad" value="Jubilado"><div class="option-text"><span class="option-label">Jubilado(a) o pensionado(a)</span></div></label>
+                <label class="option"><input type="radio" name="actividad" value="Hogar"><div class="option-text"><span class="option-label">Hogar</span></div></label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5 -->
+        <section class="section">
+          <div class="question">
+            <div class="q-number">5</div>
+            <div class="q-content">
+              <p class="q-title">¿Cuál es el ingreso mensual aproximado de su hogar?</p>
+              <div class="options">
+                <label class="option"><input type="radio" name="ingreso" value="<3000" required><div class="option-text"><span class="option-label">Menos de $3,000 MXN</span></div></label>
+                <label class="option"><input type="radio" name="ingreso" value="3000-6000"><div class="option-text"><span class="option-label">$3,000 – $6,000 MXN</span></div></label>
+                <label class="option"><input type="radio" name="ingreso" value="6001-10000"><div class="option-text"><span class="option-label">$6,001 – $10,000 MXN</span></div></label>
+                <label class="option"><input type="radio" name="ingreso" value="10001-20000"><div class="option-text"><span class="option-label">$10,001 – $20,000 MXN</span></div></label>
+                <label class="option"><input type="radio" name="ingreso" value=">20000"><div class="option-text"><span class="option-label">Más de $20,000 MXN</span></div></label>
+                <label class="option"><input type="radio" name="ingreso" value="Prefiero no responder"><div class="option-text"><span class="option-label">Prefiero no responder</span></div></label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6 -->
+        <section class="section">
+          <div class="question">
+            <div class="q-number">6</div>
+            <div class="q-content">
+              <p class="q-title">¿Cuántas personas viven en su hogar (incluyéndose usted)?</p>
+              <div class="options">
+                <label class="option"><input type="radio" name="personas" value="1" required><div class="option-text"><span class="option-label">1 persona</span></div></label>
+                <label class="option"><input type="radio" name="personas" value="2"><div class="option-text"><span class="option-label">2 personas</span></div></label>
+                <label class="option"><input type="radio" name="personas" value="3"><div class="option-text"><span class="option-label">3 personas</span></div></label>
+                <label class="option"><input type="radio" name="personas" value="4"><div class="option-text"><span class="option-label">4 personas</span></div></label>
+                <label class="option"><input type="radio" name="personas" value="5+"><div class="option-text"><span class="option-label">5 o más personas</span></div></label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7 -->
+        <section class="section">
+          <div class="question">
+            <div class="q-number">7</div>
+            <div class="q-content">
+              <p class="q-title">¿Qué tipo de vivienda habita?</p>
+              <div class="options">
+                <label class="option"><input type="radio" name="vivienda" value="PropiaPagada" required><div class="option-text"><span class="option-label">Propia, totalmente pagada</span></div></label>
+                <label class="option"><input type="radio" name="vivienda" value="PropiaCredito"><div class="option-text"><span class="option-label">Propia, pagando crédito hipotecario</span></div></label>
+                <label class="option"><input type="radio" name="vivienda" value="Rentada"><div class="option-text"><span class="option-label">Rentada</span></div></label>
+                <label class="option"><input type="radio" name="vivienda" value="Prestada"><div class="option-text"><span class="option-label">Prestada o cedida</span></div></label>
+                <label class="option"><input type="radio" name="vivienda" value="Otra"><div class="option-text"><span class="option-label">Otra</span></div></label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 8 -->
+        <section class="section">
+          <div class="question">
+            <div class="q-number">8</div>
+            <div class="q-content">
+              <p class="q-title">¿Con qué servicios básicos cuenta su vivienda?</p>
+              <div class="options">
+                <label class="option"><input type="checkbox" name="servicios" value="Agua"><div class="option-text"><span class="option-label">Agua potable</span></div></label>
+                <label class="option"><input type="checkbox" name="servicios" value="Energia"><div class="option-text"><span class="option-label">Energía eléctrica</span></div></label>
+                <label class="option"><input type="checkbox" name="servicios" value="Drenaje"><div class="option-text"><span class="option-label">Drenaje</span></div></label>
+                <label class="option"><input type="checkbox" name="servicios" value="Gas"><div class="option-text"><span class="option-label">Gas natural o LP</span></div></label>
+                <label class="option"><input type="checkbox" name="servicios" value="Basura"><div class="option-text"><span class="option-label">Recolección de basura</span></div></label>
+                <label class="option"><input type="checkbox" name="servicios" value="Internet"><div class="option-text"><span class="option-label">Internet</span></div></label>
+                <label class="option"><input type="checkbox" name="servicios" value="Telefonia"><div class="option-text"><span class="option-label">Telefonía fija</span></div></label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 9 -->
+        <section class="section">
+          <div class="question">
+            <div class="q-number">9</div>
+            <div class="q-content">
+              <p class="q-title">¿Qué medios de transporte utiliza con mayor frecuencia?</p>
+              <div class="options">
+                <label class="option"><input type="checkbox" name="transporte" value="Auto"><div class="option-text"><span class="option-label">Automóvil propio</span></div></label>
+                <label class="option"><input type="checkbox" name="transporte" value="Publico"><div class="option-text"><span class="option-label">Transporte público (autobús, metro, taxi, etc.)</span></div></label>
+                <label class="option"><input type="checkbox" name="transporte" value="Moto"><div class="option-text"><span class="option-label">Motocicleta</span></div></label>
+                <label class="option"><input type="checkbox" name="transporte" value="Bici"><div class="option-text"><span class="option-label">Bicicleta</span></div></label>
+                <label class="option"><input type="checkbox" name="transporte" value="Caminar"><div class="option-text"><span class="option-label">Caminata</span></div></label>
+                <label class="option"><input type="checkbox" name="transporte" value="Otro"><div class="option-text"><span class="option-label">Otro</span></div></label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 10 -->
+        <section class="section">
+          <div class="question">
+            <div class="q-number">10</div>
+            <div class="q-content">
+              <p class="q-title">¿Tiene acceso a servicios de salud?</p>
+              <div class="options">
+                <label class="option"><input type="radio" name="salud" value="Publico" required><div class="option-text"><span class="option-label">Sí, público (IMSS, ISSSTE, INSABI, etc.)</span></div></label>
+                <label class="option"><input type="radio" name="salud" value="Privado"><div class="option-text"><span class="option-label">Sí, privado</span></div></label>
+                <label class="option"><input type="radio" name="salud" value="Ambos"><div class="option-text"><span class="option-label">Ambos</span></div></label>
+                <label class="option"><input type="radio" name="salud" value="Ninguno"><div class="option-text"><span class="option-label">No tengo acceso a servicios de salud</span></div></label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 11 -->
+        <section class="section">
+          <div class="question">
+            <div class="q-number">11</div>
+            <div class="q-content">
+              <p class="q-title">¿Qué dispositivos electrónicos tiene en su hogar?</p>
+              <div class="options">
+                <label class="option"><input type="checkbox" name="dispositivos" value="PC"><div class="option-text"><span class="option-label">Computadora o laptop</span></div></label>
+                <label class="option"><input type="checkbox" name="dispositivos" value="Movil"><div class="option-text"><span class="option-label">Teléfono inteligente</span></div></label>
+                <label class="option"><input type="checkbox" name="dispositivos" value="TV"><div class="option-text"><span class="option-label">Televisor</span></div></label>
+                <label class="option"><input type="checkbox" name="dispositivos" value="Tableta"><div class="option-text"><span class="option-label">Tableta</span></div></label>
+                <label class="option"><input type="checkbox" name="dispositivos" value="Consola"><div class="option-text"><span class="option-label">Consola de videojuegos</span></div></label>
+                <label class="option"><input type="checkbox" name="dispositivos" value="Ninguno"><div class="option-text"><span class="option-label">Ninguno</span></div></label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 12 -->
+        <section class="section">
+          <div class="question">
+            <div class="q-number">12</div>
+            <div class="q-content">
+              <p class="q-title">¿Qué tan satisfecho(a) se siente con su situación económica actual?</p>
+              <div class="options">
+                <label class="option"><input type="radio" name="satisfaccion" value="Muy satisfecho" required><div class="option-text"><span class="option-label">Muy satisfecho(a)</span></div></label>
+                <label class="option"><input type="radio" name="satisfaccion" value="Satisfecho"><div class="option-text"><span class="option-label">Satisfecho(a)</span></div></label>
+                <label class="option"><input type="radio" name="satisfaccion" value="Neutral"><div class="option-text"><span class="option-label">Ni satisfecho(a) ni insatisfecho(a)</span></div></label>
+                <label class="option"><input type="radio" name="satisfaccion" value="Insatisfecho"><div class="option-text"><span class="option-label">Insatisfecho(a)</span></div></label>
+                <label class="option"><input type="radio" name="satisfaccion" value="Muy insatisfecho"><div class="option-text"><span class="option-label">Muy insatisfecho(a)</span></div></label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div style="padding:18px; display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap">
+          <div class="note">Todos los campos son obligatorios.</div>
+          <div>
+            <button type="button" class="btn secondary" onclick="resetForm()">Restablecer</button>
+            <button class="btn" type="submit">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div style="margin-top:18px; max-width:900px;">
+      <div class="summary" id="result" style="display:none"></div>
+    </div>
+  </main>
+
+</body>
+</html>

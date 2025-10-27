@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gracias por tu respuesta</title>
+  <style>
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background-color: #f1f3f4;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      max-width: 400px;
+      width: 90%;
+      padding: 30px 25px;
+      text-align: center;
+      animation: aparecer 0.5s ease;
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card h1 {
+      color: #6a1b9a;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #5f6368;
+      font-size: 16px;
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+
+    .btn {
+      background-color: #6a1b9a;
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 6px;
+      font-weight: 500;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #571580
+    }
+
+        @media (max-width:640px){
+          body{
+            padding-top: 20px;
+            align-items: start;
+          }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>¡Gracias por resolver la encuesta!</h1>
+    <p>Tu participación es muy valiosa y nos ayuda a recopilar información importante para nuestro estudio.  
+       Si deseas volver a llenar la encuesta, puedes hacerlo presionando el botón de abajo.</p>
+    <a href="index.html" class="btn">Volver a la encuesta</a>
+  </div>
+</body>
+</html>

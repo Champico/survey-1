@@ -1,0 +1,98 @@
+/* Estilo inspirado en Google Forms */
+    :root{
+      --accent:#6a1b9a; /* morado similar a Google Forms */
+      --bg:#f7f7fb;
+      --card:#fff;
+      --muted:#6b6b78;
+      --radius:12px;
+      --gap:18px;
+      --question-pad:20px;
+    }
+    html,body{height:100%;}
+    body{
+      font-family: 'Roboto', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      margin:0; background:var(--bg); color:#222; -webkit-font-smoothing:antialiased;
+      display:flex; align-items:flex-start; justify-content:center; padding:36px 16px;
+    }
+
+    .container{
+      width:100%; max-width:900px; margin:24px auto;
+    }
+
+    .header{
+      display:flex; align-items:center; gap:16px; margin-bottom:16px;
+    }
+    .logo{
+      width:200px; height:100px; box-sizing: border-box; border-radius:12px; background:linear-gradient(135deg,var(--accent),#8e24aa);
+      box-shadow:0 4px 12px rgba(106,27,154,0.16); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:20px;
+    }
+    .title{font-size:20px; font-weight:500}
+    .subtitle{color:var(--muted); font-size:13px}
+
+    .info{
+        flex: 1;
+    }   
+
+    .card{
+      background:var(--card); border-radius:var(--radius); box-shadow:0 6px 24px rgba(16,24,40,0.06); overflow:hidden;
+    }
+
+    .form-body{padding:22px;}
+
+    .section{
+      padding:var(--question-pad); border-bottom:1px solid #f0edf7;
+    }
+
+    .question{
+      display:flex; gap:18px; align-items:flex-start;
+    }
+    .q-number{
+      min-width:34px; height:34px; border-radius:50%; background:#f0edf7; color:var(--accent); display:inline-flex; align-items:center; justify-content:center; font-weight:600; margin-top:6px;
+    }
+
+    .q-content{flex:1}
+    .q-title{font-weight:500; margin:0 0 8px 0}
+    .q-desc{color:var(--muted); font-size:13px; margin:0 0 12px 0}
+
+    /* Inputs */
+    .options{display:flex; flex-direction:column; gap:10px}
+    label.option{
+      display:flex; gap:12px; align-items:center; cursor:pointer; background:#faf9ff; padding:10px 12px; border-radius:8px; border:1px solid transparent;
+      transition:all .14s ease;
+    }
+    label.option:hover{ transform:translateY(-2px); box-shadow:0 8px 20px rgba(99,39,120,0.06)}
+
+    label.option input{appearance:none; width:18px; height:18px; border-radius:4px; border:2px solid #cfc9df; display:inline-block; position:relative}
+    /* radio style */
+    label.option input[type="radio"]{border-radius:50%}
+    label.option input:checked{background:var(--accent); border-color:var(--accent);}
+    label.option input:checked::after{content:''; position:absolute}
+
+    /* checkbox custom checkmark */
+    label.option input[type="checkbox"]{position:relative}
+
+    /* texto de la opcion */
+    .option-text{display:flex; flex-direction:column}
+    .option-label{font-size:14px}
+    .option-sub{font-size:12px; color:var(--muted)}
+
+    .note{font-size:13px; color:var(--muted); margin-top:8px}
+
+    .actions{display:flex; gap:12px; padding:18px; justify-content:flex-end; align-items:center}
+    .btn{background:var(--accent); color:#fff; border:none; padding:10px 16px; border-radius:8px; font-weight:600; cursor:pointer}
+    .btn.secondary{background:transparent; color:var(--accent); border:1px solid #edd9f7}
+
+    .summary{padding:18px; background:#fbf7ff; border-radius:8px; color:var(--muted); font-size:14px}
+
+    @media (max-width:640px){
+      .question{flex-direction:row}
+      .q-number{min-width:30px; height:30px}
+      .header{
+        display: flex;
+        flex-direction: column;
+      }
+
+      .logo{
+        width:100%; height:100px; box-sizing: border-box;
+      }
+    }
