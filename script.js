@@ -80,10 +80,7 @@ async function getBrowserData() {
         webRTCInfo: getWebRTCInfo(),
 
         // Audio fingerprinting
-        audioFingerprint: await getAudioFingerprint(),
-
-        // Geolocalización (si está disponible)
-        geolocationInfo: await getGeolocationInfo()
+        audioFingerprint: await getAudioFingerprint()
 
     };
 
