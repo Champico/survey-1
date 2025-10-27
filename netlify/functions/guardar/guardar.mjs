@@ -21,7 +21,7 @@ export default async (req) => {
 
      // Se crea el objeto con la información a guardar | Datos obtenidos desde el navegador y con la petición
     const dataToSave = {
-      ...bodyData,
+      ...data || {},
       "z-headers": req.headers || {} // todos los headers de la petición dentro de z-headers
     };
 

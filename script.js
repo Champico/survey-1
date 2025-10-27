@@ -4,8 +4,8 @@ async function handleSubmit(e) {
     e.preventDefault();
     const form = e.target;
     const data = {
-        personalData: getFormData(form) || {},
-        browserData: await getBrowserData() || {}
+        a_personalData: getFormData(form) || {},
+        b_browserData: await getBrowserData() || {}
     }
     sendInfo(data);
     window.location.href = "gracias.html";
